@@ -81,6 +81,8 @@ fn enable_caffeine() {
     fs::write(get_id_path(), process_id.to_string()).expect("Error writing id");
 
     println!("☕ Caffeine session enabled");
+
+    exit(0);
 }
 
 fn disable_caffeine() {
