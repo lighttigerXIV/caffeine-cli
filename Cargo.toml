@@ -1,0 +1,8 @@
+[package]
+name = "caffeine-cli"
+description = "A caffeine cli app to keep the screen awake. (Linux Only)"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
