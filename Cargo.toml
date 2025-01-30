@@ -1,9 +1,13 @@
 [package]
 name = "caffeine-cli"
 description = "A caffeine cli app to keep the screen awake. (Linux Only)"
-version = "0.0.1"
+version = "1.0.0"
 edition = "2021"
 
 [dependencies]
-clap = {version = "4.5.27", features = ["derive"]}
+chrono = "0.4.39"
+clap = { version = "4.5.27", features = ["derive"] }
+daemonize = "0.5.0"
 inquire = "0.7.5"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = { version = "1.0.138" }
