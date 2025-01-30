@@ -2,8 +2,9 @@
 name = "caffeine-cli"
 description = "A caffeine cli app to keep the screen awake. (Linux Only)"
 license = "MIT"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
+repository = "https://github.com/lighttigerxiv/caffeine-cli"
 
 [dependencies]
 chrono = "0.4.39"

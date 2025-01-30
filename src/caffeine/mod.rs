@@ -36,13 +36,12 @@ impl fmt::Display for SessionError {
     }
 }
 
+/// The session path. **/tmp/caffeine-session.json**
 pub fn get_session_path() -> PathBuf {
     PathBuf::from("/tmp/caffeine-session.json")
 }
 
-/**
-Inits a caffeine session.
-*/
+/// Inits a caffeine session.
 pub fn init_session(seconds: Option<u64>) -> Result<CaffeineSession, Box<dyn Error>> {
     let seconds_str = if let Some(seconds) = seconds {
         seconds.to_string()
@@ -71,6 +70,7 @@ pub fn init_session(seconds: Option<u64>) -> Result<CaffeineSession, Box<dyn Err
     })
 }
 
+/// Inits a protected caffeine session (recommended). It writes a file so that no other session can be also active
 pub fn init_protected_session(seconds: Option<u64>) -> Result<CaffeineSession, Box<dyn Error>> {
     let session = get_session();
 
@@ -97,6 +97,7 @@ pub fn init_protected_session(seconds: Option<u64>) -> Result<CaffeineSession, B
     Ok(new_session)
 }
 
+/// Ends the given session
 pub fn end_session(session: CaffeineSession) -> Result<(), Box<dyn Error>> {
     Command::new("kill")
         .arg(&session.proccess_id)
@@ -120,6 +121,7 @@ pub fn end_protected_session() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/// Get the active session
 pub fn get_session() -> Option<CaffeineSession> {
     let session_json = fs::read_to_string(get_session_path());
 

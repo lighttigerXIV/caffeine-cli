@@ -14,6 +14,18 @@ Alternatively you can manually download the release binary in the [releases](htt
 
 # Usage
 
+To install it as you can use cargo to add it or manually add the library in cargo.toml:
+
+```bash
+cargo add caffeine-cli
+```
+
+To add it in the cargo.toml:
+
+```toml
+caffeine-cli = "1.0.1"
+```
+
 You can also use this as a library:
 
 To start and get a session you can use the init_session command:
