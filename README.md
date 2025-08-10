@@ -69,4 +69,4 @@ You can run the following commands:
 
 Alternatively you can run the app and select the options in the menu:
 
-<img src="./cli-preview.webp">
+<img src="./cli-preview.png">
